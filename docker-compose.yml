@@ -1,0 +1,9 @@
+web:
+  image: firesh/nginx-lua
+  volumes:
+    - ./:/var/www/nginx
+    - ./nginx.conf:/etc/nginx/nginx.conf:ro
+  ports:
+   - "8080:80"
+  environment:
+   - NGINX_PORT=80
